@@ -1,6 +1,7 @@
 from typing import Dict, Any
 from .clip_embeddings import CLIPEmbeddingGenerator
-from .metadata_generator import MetadataGenerator
+from .clip_metadata_generator import MetadataGenerator
+from .gpt_metadata_generator import GPTMetadataGenerator
 
 class MetadataFactory:
     """Factory for creating metadata processing components"""
@@ -14,3 +15,8 @@ class MetadataFactory:
     def create_metadata_generator(config: Dict[str, Any]) -> MetadataGenerator:
         """Create metadata generator"""
         return MetadataGenerator(config)
+    
+    @staticmethod
+    def create_gpt_metadata_generator(config: Dict[str, Any]) -> GPTMetadataGenerator:
+        """Create GPT-based metadata generator"""
+        return GPTMetadataGenerator(config)
