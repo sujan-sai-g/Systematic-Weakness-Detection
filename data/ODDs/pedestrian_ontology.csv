@@ -1,0 +1,14 @@
+sem-dim,,,,,
+gender, female,male
+age, adult,child
+skin-color, dark,white
+hair-color, black,blond, gray, brown
+shirt-color, bright-color,dark-color,
+pant-color, bright-color,dark-color,,,
+clothing-color, bright-color,dark-color
+pose,facing forwards,facing backwards,facing sideways
+occlusion,clearly visible	,heavily occluded
+in-group,false,true
+construction-worker,false,true
+blurry,false,true
+objects, car, building

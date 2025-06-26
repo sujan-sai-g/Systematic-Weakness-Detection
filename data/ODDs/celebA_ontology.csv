@@ -1,0 +1,11 @@
+sem-dim,,,,,
+gender,female,male
+age,adult,young
+skin-color,dark,pale
+hair-color,black,blond,gray,brown
+wearing-hat, false, true
+goatee, false, true
+beard, false, true
+smiling, false, true
+eye-glasses, false, true
+bald, false, true
