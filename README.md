@@ -16,7 +16,7 @@ Slice Discovery, Vision Model Testing
 ## Quick Start
 ```bash
 # Clone the repository
-git clone [your-repo-url]
+git clone https://github.com/sujan-sai-g/Systematic-Weakness-Detection.git
 cd [repo-name]
 
 # Install dependencies
