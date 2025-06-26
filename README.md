@@ -5,12 +5,8 @@ Slice discovery methods (SDMs) are prominent algorithms for finding systematic w
 
 Slice Discovery, Vision Model Testing
 
-### TODO
-- ADD license
-- Mention CLIP and other papers have different license 
-- fix toml file with personal info
-- add the egg info folder to gitignore
-- test Sliceline and push to git for now 
+
+
 
 ## Paper Information
 - **Journal**: TMLR 2025

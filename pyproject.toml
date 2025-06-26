@@ -73,8 +73,8 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/your-experiment-name"
-Repository = "https://github.com/yourusername/your-experiment-name"
+Homepage = "https://github.com/sujan-sai-g/Systematic-Weakness-Detection"
+Repository = "https://github.com/sujan-sai-g/Systematic-Weakness-Detection"
 
 [tool.setuptools.packages.find]
 where = ["src"]
