@@ -1,7 +1,7 @@
 import os
 
-RESULTS_BASE = "/home/IAIS/sgannamane/results/tmlr_2025/celeba_results"
-DATA_BASE = "/home/IAIS/sgannamane/data"
+RESULTS_BASE = "root_results_path/"
+DATA_BASE = "data_path/"
 
 config = {
     "seed": 100,
@@ -36,7 +36,7 @@ config = {
     },
     
     "sliceline_input": {
-        "precision_data_path": os.path.join(RESULTS_BASE, "precisions_and_recall_celebA.csv"),
+        "precision_data_path": os.path.join("../data/precision_and_recall_csvs/", "precisions_and_recall_celebA.csv"),
         "gt_data_path": os.path.join(RESULTS_BASE, "celeba_gt_metadata_with_performance.csv"),
         "clip_data_path": os.path.join(RESULTS_BASE, "celeba_clip_metadata_with_performance.csv")
     },
