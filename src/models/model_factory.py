@@ -1,7 +1,7 @@
 from typing import Dict, Any
 from .base_model import BaseModel
 from .imagenet21k_models import ImageNet21kModel
-from .detection_models import BDD100kDetectionModel, YOLODetectionModel
+from .bdd_detection_models import BDD100kDetectionModel
 # from .custom_model import CustomModel
 
 class ModelFactory:
@@ -10,7 +10,6 @@ class ModelFactory:
     _model_registry = {
         'imagenet21k': ImageNet21kModel,
         'bdd100k_detection': BDD100kDetectionModel,
-        'yolo_detection': YOLODetectionModel,
         # 'custom': CustomModel,
     }
     
@@ -21,7 +20,7 @@ class ModelFactory:
         
         Args:
             model_config: Configuration dict with:
-                - type: REQUIRED - 'imagenet21k', 'bdd100k_detection', 'yolo_detection', or 'custom'
+                - type: REQUIRED - 'imagenet21k', 'bdd100k_detection', or 'custom'
                 - model_name: specific model (e.g., 'vit_base_patch16_224_miil_in21k')
                 - device: 'cuda:0', 'cpu', etc.
                 - **other model-specific args

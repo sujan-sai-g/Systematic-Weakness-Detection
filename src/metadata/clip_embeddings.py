@@ -21,6 +21,7 @@ class CLIPEmbeddingGenerator:
         self.device = self._setup_device(config.get('device', 'auto'))
         self.model_name = config.get('clip_model', 'ViT-L/14')
         self.seed = config.get('seed', 100)
+        self.include_instance_id = config.get('include_instance_id', False)
         self.setup_reproducibility()
         self.load_clip_model()
         
@@ -62,17 +63,23 @@ class CLIPEmbeddingGenerator:
         
         filename_list = []
         image_features_list = []
-        
+        instance_id_list = []
         for image_path in tqdm.tqdm(image_paths, desc="Generating embeddings"):
             try:
                 # Extract filename without extension
-                filename = Path(image_path).stem
-                
+                if not self.include_instance_id:
+                    filename = Path(image_path).stem
+                    filename_list.append(filename)
+
                 # Generate embedding
                 image_features = self.encode_single_image(image_path)
                 
-                filename_list.append(filename)
                 image_features_list.append(image_features)
+                
+                if self.include_instance_id:
+                    instance_id_list.append(image_path.split("/")[-1].split("_")[0])
+                    filename_list.append(image_path.split("/")[-1].split("_")[1].split(".")[0])
+
                 
             except Exception as e:
                 print(f"Error processing {image_path}: {e}")
@@ -83,6 +90,9 @@ class CLIPEmbeddingGenerator:
             'Filename': filename_list,
             'image_features_list': image_features_list
         })
+        
+        if self.include_instance_id:
+            df['instance_id'] = instance_id_list
         
         # Save to pickle
         output_path = Path(output_path)
