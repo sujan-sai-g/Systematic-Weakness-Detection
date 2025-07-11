@@ -36,7 +36,7 @@ config = {
     },
     
     "sliceline_input": {
-        "precision_data_path": os.path.join("../data/precision_and_recall_csvs/", "precisions_and_recall_celebA.csv"),
+        "precision_data_path": str(project_root / "data" / "precision_and_recall_csvs" / "precisions_and_recall_celebA.csv"),  
         "gt_data_path": os.path.join(RESULTS_BASE, "celeba_gt_metadata_with_performance.csv"),
         "clip_data_path": os.path.join(RESULTS_BASE, "celeba_clip_metadata_with_performance.csv")
     },
