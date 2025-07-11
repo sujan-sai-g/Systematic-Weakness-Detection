@@ -2,8 +2,10 @@ import os
 from pathlib import Path
 
 
-RESULTS_BASE = "root_results_path/"
-DATA_BASE = "data_path/"
+RESULTS_BASE = "base_path"
+DATA_BASE = "data_path"
+PEDESTRIAN_CROPS_FOLDER = "cropped_images_path"
+project_root = Path(__file__).parent.parent.parent
 
 config = {
     "seed": 100,

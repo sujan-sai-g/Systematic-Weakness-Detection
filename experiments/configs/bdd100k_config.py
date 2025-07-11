@@ -1,9 +1,9 @@
 import os
 from pathlib import Path
 
-RESULTS_BASE = "/home/IAIS/sgannamane/results/tmlr_2025/bdd100k/"
-DATA_BASE = "/data/share/image_datasets/BDD/bdd100k/"
-PEDESTRIAN_CROPS_FOLDER = "/home/IAIS/sgannamane/data/cvpr/"
+RESULTS_BASE = "base_path"
+DATA_BASE = "data_path"
+PEDESTRIAN_CROPS_FOLDER = "cropped_images_path"
 project_root = Path(__file__).parent.parent.parent
 
 config = {
